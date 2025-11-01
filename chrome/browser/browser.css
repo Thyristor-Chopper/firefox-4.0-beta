@@ -1,4 +1,4 @@
-/* THE **APP MENU BUTTON PART (LINE 150-525) AND LWTHEME PART (LINE 3405-3460, 1695-1710)** Source Code Form is subject to the terms of the Mozilla Public
+/* THE **APP MENU BUTTON PART (LINE 150-525) AND LWTHEME PART (LINE 3462-3517, 1695-1710)** Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
@@ -114,6 +114,10 @@
        (-moz-os-version: windows-win8) and (-moz-windows-default-theme) {
 	#navigator-toolbox > toolbar:not(:-moz-lwtheme) {
 		background-color: rgb(227, 237, 246);
+	}
+	
+	#navigator-toolbox > #PersonalToolbar, #navigator-toolbox > #PersonalToolbar ~ toolbar {
+		-moz-appearance: -moz-win-exclude-glass !important;
 	}
 }
 
@@ -2826,6 +2830,17 @@ toolbarbutton.bookmark-item[dragover="true"][open="true"] {
   -moz-appearance: none !important;
 }
 
+#browser {
+	-moz-appearance: -moz-win-exclude-glass !important;
+	border-width: 0 !important;
+}
+
+#main-window[sizemode="normal"] #browser-bottombox {
+	-moz-appearance: -moz-win-exclude-glass !important;
+    border: 0px solid rgba(10%,10%,10%,.4);
+    border-top-style: none;
+}
+
 #browser-bottombox > toolbar#addon-bar {
   -moz-appearance: statusbar !important;
 }
@@ -3419,6 +3434,29 @@ toolbarbutton, .toolbarbutton-1 {
 
 #urlbar-stop-button:hover {
   background-image: -moz-linear-gradient(rgb(244,156,128), rgb(215,101,77) 49%, rgb(194,66,48) 51%, rgb(170,41,23));
+}
+
+@media (-moz-windows-compositor) {
+	#navigator-toolbox:not([tabsontop="true"]) toolbar:not(#PersonalToolbar):not(#TabsToolbar) {
+		background: transparent !important;
+	}
+
+	#navigator-toolbox:not([tabsontop="true"]) #PersonalToolbar ~ toolbar:not(#TabsToolbar) {
+	  background: -moz-Dialog !important;
+	  -moz-appearance: -moz-win-exclude-glass !important;
+	}
+
+	@media (-moz-os-version: windows-vista), 
+		   (-moz-os-version: windows-win7), 
+		   (-moz-os-version: windows-win8) and (-moz-windows-default-theme) {
+		#navigator-toolbox:not([tabsontop="true"]) #PersonalToolbar ~ toolbar:not(#TabsToolbar) {
+			background: rgb(227, 237, 246) !important;
+		}
+	}
+
+	#navigator-toolbox[tabsontop="true"] #PersonalToolbar ~ toolbar:not(#TabsToolbar), #navigator-toolbox[tabsontop="true"] toolbar#linktoolbar {
+		background: rgb(227, 237, 246) !important;
+	}
 }
 
 .tabbrowser-tab[selected="true"]:-moz-lwtheme {
