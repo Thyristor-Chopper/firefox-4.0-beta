@@ -2128,10 +2128,6 @@ toolbarbutton.bookmark-item[dragover="true"][open="true"] {
 }
 
 /* Notification popup */
-#notification-popup {
-  padding: 10px;
-  margin-top: 3px;
-}
 
 .popup-notification-icon {
   width: 64px;
@@ -2145,7 +2141,7 @@ toolbarbutton.bookmark-item[dragover="true"][open="true"] {
 
 /* Notification icon box */
 #notification-popup-box {
-  margin: 0 3px;
+  margin: 0 3px 0 0;
 }
 
 #geo-notification-icon {
@@ -3514,4 +3510,73 @@ toolbarbutton, .toolbarbutton-1 {
 #toolbar-menubar menubar:-moz-lwtheme {
 	/*background: rgba(255,255,255,.3);*/
 	border-radius: 5px;
+}
+
+.notification-anchor-icon {
+  width: 16px;
+  height: 16px;
+  margin: 0 2px;
+}
+
+.notification-anchor-icon:-moz-focusring {
+  outline: 1px dotted -moz-DialogText;
+  outline-offset: -3px;
+}
+
+#notification-popup-box:-moz-locale-dir(rtl),
+.notification-anchor-icon:-moz-locale-dir(rtl) {
+  transform: scaleX(-1);
+}
+
+.default-notification-icon,
+#default-notification-icon {
+  list-style-image: url(chrome://global/skin/icons/information-16.png);
+}
+
+.geo-notification-icon,
+#geo-notification-icon {
+  list-style-image: url(chrome://browser/skin/Geolocation-16.png);
+}
+
+#addons-notification-icon {
+  list-style-image: url(chrome://mozapps/skin/extensions/extensionGeneric-16.png);
+}
+
+.indexedDB-notification-icon,
+#indexedDB-notification-icon {
+  list-style-image: url(chrome://global/skin/icons/question-16.png);
+}
+
+#password-notification-icon {
+  list-style-image: url(chrome://mozapps/skin/passwordmgr/key-16.png);
+}
+
+#plugins-notification-icon {
+  list-style-image: url(chrome://browser/skin/notification-pluginNormal.png);
+}
+
+#alert-plugins-notification-icon {
+  list-style-image: url(chrome://browser/skin/notification-pluginAlert.png);
+}
+
+#blocked-plugins-notification-icon {
+  list-style-image: url(chrome://browser/skin/notification-pluginBlocked.png);
+}
+
+#plugins-notification-icon,
+#alert-plugins-notification-icon,
+#blocked-plugins-notification-icon {
+  -moz-image-region: rect(0, 16px, 16px, 0);
+}
+
+#plugins-notification-icon:hover,
+#alert-plugins-notification-icon:hover,
+#blocked-plugins-notification-icon:hover {
+  -moz-image-region: rect(0, 32px, 16px, 16px);
+}
+
+#plugins-notification-icon:active,
+#alert-plugins-notification-icon:active,
+#blocked-plugins-notification-icon:active {
+  -moz-image-region: rect(0, 48px, 16px, 32px);
 }
