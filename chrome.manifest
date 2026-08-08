@@ -1,5 +1,4 @@
 skin 	browser 	firefox4b chrome/browser/
-skin 	communicator 	firefox4b chrome/communicator/
 skin 	global 	firefox4b chrome/global/
 skin 	os 	firefox4b chrome/os/linux/
 skin 	os 	firefox4b chrome/os/winnt/ os=WINNT
