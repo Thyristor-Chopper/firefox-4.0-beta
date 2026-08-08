@@ -789,8 +789,8 @@ toolbar[mode="full"] .toolbarbutton-menubutton-button {
   min-width: 57px;
 }
 
-#PersonalToolbar > .toolbarbutton-1,
-#PersonalToolbar ~ toolbar > .toolbarbutton-1 {
+#PersonalToolbar .toolbarbutton-1,
+#PersonalToolbar ~ toolbar .toolbarbutton-1 {
 	-moz-appearance: toolbarbutton;
 	margin: 0;
 	padding: 0 3px;
@@ -801,8 +801,8 @@ toolbar[mode="full"] .toolbarbutton-menubutton-button {
 	box-shadow: none !important;
 }
 
-#PersonalToolbar > .toolbarbutton-1 .toolbarbutton-icon,
-#PersonalToolbar ~ toolbar > .toolbarbutton-1 .toolbarbutton-icon,
+#PersonalToolbar .toolbarbutton-1 .toolbarbutton-icon,
+#PersonalToolbar ~ toolbar .toolbarbutton-1 .toolbarbutton-icon,
 #toggle-sidebar-button .toolbarbutton-icon {
 	width: auto;
 	height: auto;
